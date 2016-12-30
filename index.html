@@ -1,15 +1,28 @@
 <!doctype html>
-<html lang="en" ng-app="NarrowItDownApp">
+<html lang="en" ng-app="MenuApp">
   <head>
-    <title>Narrow Down Your Menu Choice</title>
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
+    <title>Welcome to our restaurant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
   </head>
 <body>
-   <div class="container" ng-controller="NarrowItDownController as ctrl">
+  <h1>Welcome to our restaturant!</h1>
+
+  <ui-view></ui-view>
+
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+
+  <script src="src/data.module.js"></script>
+  <script src="src/home/menuapp.module.js"></script>
+
+  <script src="src/routes.js"></script>
+  <script src="src/categories/categories.component.js"></script>
+  <script src="src/categories/menudata.service.js"></script>
+  <script src="src/categories/menulist.controller.js"></script>
+  <script src="src/items/items.component.js"></script>
+  <script src="src/items/items.controller.js"></script>
+
+   <!-- <div class="container" ng-controller="NarrowItDownController as ctrl">
        <h1>Narrow Down Your Chinese Menu Choice</h1>
 
        <div class="form-group">
@@ -21,12 +34,12 @@
        </div>
        <br/>
        <br/>
-
+-->
         <!-- found-items should be implemented as a component -->
-        <div class="list">
+        <!-- <div class="list">
             <found-items items="ctrl.FoundItems" on-remove="ctrl.remove(index)"></found-items>
-        </div>
-  </div>
+        </div> -->
+  <!-- </div> -->
 
 </body>
 </html>
